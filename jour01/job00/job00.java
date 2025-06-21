@@ -23,7 +23,7 @@ public class job00 {
 
 		System.out.println("valeur de grandNombre : " + grandNombre);
 		System.out.println("valeur de pi : " + pi);
-		System.out.println("valeur de faux : " + false);
+		System.out.println("valeur de faux : " + faux);
 	}
 
 }

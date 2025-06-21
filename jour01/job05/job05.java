@@ -9,12 +9,24 @@ public class job05 {
 	public static void main(String[] args) {
 
 		int nombres[] = new int[3];
-		System.out.println("Premier nombre ?");
-		nombres[0] = entree.nextInt();
-		System.out.println("Deuxième nombre ?");
-		nombres[1] = entree.nextInt();
-		System.out.println("Troisième nombre ?");
-		nombres[2] = entree.nextInt();
+
+		for (int i = 0 ; i < 3 ; i++)
+		{
+	        int nombre = 0;
+	        boolean valide = false;
+
+
+	        while (!valide) {
+	            System.out.print("Veuillez rentrer un nombre entier : ");
+	            try {
+	                nombres[i] = entree.nextInt();
+	                valide = true;
+	            } catch (Exception e) {
+	                System.out.println("Erreur : Ce n'est pas un entier.");
+	                entree.nextLine(); // vide le buffer pour éviter une boucle infinie
+	            }
+	        }		
+		}
 		
 		int maxi = Math.max(nombres[0], nombres[1]);
 		maxi = Math.max(maxi, nombres[2]);

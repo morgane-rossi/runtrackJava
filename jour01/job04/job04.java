@@ -9,7 +9,14 @@ public class job04 {
 	public static void main(String[] args) {
 
 		System.out.println("Veuillez renter un nombre");
-		int nombre = entree.nextInt();
-		System.out.println("Carré du nombre = " + (nombre * nombre));
+		try {
+			int nombre = entree.nextInt();
+			System.out.println("Carré du nombre = " + (nombre * nombre));			
+		}
+		catch(Exception e) {
+			System.out.println("Erreur : Veuillez rentrer un nombre entier\nFin du programme");
+			System.exit(1);
+		}
+		entree.close();
 	}
 }
